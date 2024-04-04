@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambio de color de fondo</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cambio de color de fondo</h1>
+    <p>Haz clic en el botón para cambiar el color de fondo:</p>
+    <button class="button" onclick="cambiarColor()">Cambiar color</button>
+
+    <script>
+        function cambiarColor() {
+            // Generar un color aleatorio en formato hexadecimal
+            var color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
